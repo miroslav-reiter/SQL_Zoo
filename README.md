@@ -618,6 +618,7 @@ SELECT name, CASE WHEN dept IN (1,2) THEN 'Sci'
 ```
 ## Self JOIN
 Príklady na spájanie tabuliek autobusové zastávky, cesty
+
 1.
 ```sql
 SELECT DISTINCT COUNT(*) FROM stops
