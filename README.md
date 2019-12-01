@@ -17,7 +17,7 @@
 9a. [Self JOIN](#self-join)
 9b. [Window function](#window-unction)
 
-0. ## SELECT basics
+## SELECT basics
 Niekoľko jednoduchých dopytov, ktoré ti pomôžu začať
 
 1.
@@ -40,11 +40,11 @@ Niekoľko jednoduchých dopytov, ktoré ti pomôžu začať
   SELECT name, area FROM world
     WHERE area BETWEEN 200000 AND 250000
 ```
-1. ## SELECT name
+## SELECT name
 Niekoľko dopytov k vyhľadávanie podľa vzorov/pattern matching
 
 
-2. ## SELECT from WORLD
+## SELECT from WORLD
 Dopytovanie v tabuľke svet/world
 
 1.
@@ -114,7 +114,7 @@ SELECT name,
   FROM world
  WHERE name LIKE 'A%' or name LIKE 'B%'
 ```
-13.(this one was a doozy)
+13.
 
 ```sql
 SELECT name, continent, CASE
@@ -127,7 +127,7 @@ SELECT name, continent, CASE
 FROM world ORDER BY name
 ```
 
-##3. SELECT from NOBEL
+## SELECT from NOBEL
 Dodatočné precvičenie základných príkazov a funkcií pomocou tabuľky nositeľov Nobelovej ceny
 1.
 ```sql
@@ -215,7 +215,7 @@ SELECT winner, subject
  WHERE yr=1984
  ORDER BY subject in ('Chemistry','Physics'), subject, winner
 ```
-##4. SELECT in SELECT
+## SELECT in SELECT
 Príklady, v ktorých tvoríme dopyty pomocou iných dopytov
 1.
 ```sql
@@ -292,7 +292,7 @@ SELECT name, continent FROM world x
                          WHERE x.continent = y.continent
                          and y.name != x.name)
 ```
-##5. SUM and COUNT
+## SUM and COUNT
 Príklady na agregované funkcie, distinct, order by, group by, having
 
 1.
@@ -336,7 +336,7 @@ SELECT continent FROM world
   GROUP BY continent
   HAVING SUM(population) > 100000000
 ```
-##6. JOIN
+## JOIN
 Príklady na spájanie viacerých tabuliek hra, góly
 
 1.
@@ -426,7 +426,7 @@ LEFT JOIN goal ON game.id = goal.matchid
 GROUP BY id, mdate, team1, team2
 ORDER BY mdate, matchid, team1, team2
 ```
-##7. More JOIN
+## More JOIN
 Príklady na spájanie viacerých tabuliek herci, filmy, obsadenie
 
 1.
@@ -556,7 +556,7 @@ SELECT DISTINCT name FROM casting
 		WHERE actor.name = 'Art Garfunkel'
 )
 ```
-##8a. Using NULL
+## Using NULL
 Používanie stavu NULL, tabuľky učitelia, oddelenia
 
 1.
@@ -616,7 +616,7 @@ SELECT name, CASE WHEN dept IN (1,2) THEN 'Sci'
                   END
                   FROM teacher
 ```
-##9a. Self JOIN
+## Self JOIN
 Príklady na spájanie tabuliek autobusové zastávky, cesty
 1.
 ```sql
@@ -695,5 +695,5 @@ WHERE stopa.name = 'Craiglockhart'
 	AND stopb.name = stopc.name
 ORDER BY LENGTH(a.num), b.num, stopb.name, LENGTH(c.num), d.num;
 ```
-##9b. Window function
+## Window function
 Skúmame výsledky všeobecných volieb vo Veľkej Británii
