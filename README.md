@@ -3,7 +3,7 @@
 
 ### Vyriešené príklady SQL Zoo | [SQLZOO](http://sqlzoo.net) | [Cheat mode](http://sqlzoo.net/wiki/SELECT_basics?answer=1)
 
-## Sections:
+## Sekcie:
 0. [SELECT basics](#select-basics)
 1. [SELECT name](#select-name)
 2. [SELECT from WORLD](#select-from-world)
@@ -18,7 +18,7 @@
 9b.[Window function](#window-unction)
 
 ## SELECT basics
-Some simple queries to get you started
+Niekoľko jednoduchých dopytov, ktoré ti pomôžu začať
 
 1.
 ```sql
@@ -40,7 +40,13 @@ Some simple queries to get you started
   SELECT name, area FROM world
     WHERE area BETWEEN 200000 AND 250000
 ```
+## SELECT name
+Niekoľko dopytov k vyhľadávanie podľa vzorov/pattern matching
+
+
 ## SELECT from WORLD
+Dopytovanie v tabuľke svet/world
+
 1.
 ```sql
 SELECT name, continent, population FROM world
@@ -90,7 +96,7 @@ select name, ROUND(population/1000000,2), ROUND(gdp/1000000000,2) from world
 select name, ROUND(gdp/population,-3) from world
   where gdp > 1000000000000
 ```
-### Harder Questions:
+### Ťažšie otázky:
 11.
 ```sql
 SELECT name,
@@ -184,7 +190,7 @@ SELECT * FROM nobel
   WHERE yr < 1910 AND subject = 'Medicine'
      OR yr >= 2004 AND subject = 'Literature'
 ```
-### Harder Questions
+### Ťažšie otázky
 11.
 ```sql
 SELECT * FROM nobel
@@ -265,9 +271,9 @@ SELECT continent, name FROM world x
   WHERE name <= ALL
     (SELECT name FROM world y
         WHERE y.continent=x.continent)
---Got this one to work.. but I'm still not quite sure what the variables are doing.
+
 ```
-### Difficult Questions that use techniques not covered in previous sections...
+### Ťažšie otázky
 9.
 ```sql
 SELECT name, continent, population FROM world x
@@ -369,7 +375,7 @@ SELECT player FROM goal
   JOIN game ON (matchid = id)
   WHERE stadium = 'National Stadium, Warsaw'
 ```
-### More Difficult Questions....
+### More Ťažšie otázky....
 8.
 ```sql
 SELECT DISTINCT player
@@ -481,7 +487,7 @@ SELECT title, name FROM casting
   JOIN actor ON (actor.id = actorid)
   WHERE yr = 1962 and ord = 1
 ```
-### Harder Questions
+### Ťažšie otázky
 12.
 ```sql
 SELECT yr,COUNT(title) FROM
