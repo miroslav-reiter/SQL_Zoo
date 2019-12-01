@@ -1,4 +1,4 @@
-# Kurzy SQL
+# Kurzy SQL, MySQL, PostgreSQL, Microsoft SQL Server, IBM DB2
 **Kurzy SQL** sú koncipované tak, aby ťa doviedli **od teórie databáz k praxi**. Osvojíš si základné koncepcie a **princípy jazyka SQL**. Naučíme ťa, ako definovať **databázové objekty** a ako pracovať so **základnými príkazmi** a **ďalšími funkciami**. Už ako začiatočník zvládneš tvorbu jednoduchších dotazov. Pre pokročilých je pripravený kurz, v rámci ktorého ťa zasvätíme do jazyka **DML**, **DCL** a osvojíš si tvorbu zložitejších dotazov. Bez problémov zvládneš **správu dát**, **zabezpečenie** a **implementáci**u. 
 
 ### Vyriešené príklady SQL Zoo | [SQLZOO](http://sqlzoo.net) | [Cheat mode](http://sqlzoo.net/wiki/SELECT_basics?answer=1)
@@ -17,7 +17,7 @@
 9a. [Self JOIN](#self-join)
 9b. [Window function](#window-unction)
 
-## SELECT basics
+## 0. SELECT basics
 Niekoľko jednoduchých dopytov, ktoré ti pomôžu začať
 
 1.
@@ -40,11 +40,11 @@ Niekoľko jednoduchých dopytov, ktoré ti pomôžu začať
   SELECT name, area FROM world
     WHERE area BETWEEN 200000 AND 250000
 ```
-## SELECT name
+##1. SELECT name
 Niekoľko dopytov k vyhľadávanie podľa vzorov/pattern matching
 
 
-## SELECT from WORLD
+##2. SELECT from WORLD
 Dopytovanie v tabuľke svet/world
 
 1.
@@ -127,7 +127,7 @@ SELECT name, continent, CASE
 FROM world ORDER BY name
 ```
 
-## SELECT from NOBEL
+##3. SELECT from NOBEL
 Dodatočné precvičenie základných príkazov a funkcií pomocou tabuľky nositeľov Nobelovej ceny
 1.
 ```sql
@@ -215,7 +215,7 @@ SELECT winner, subject
  WHERE yr=1984
  ORDER BY subject in ('Chemistry','Physics'), subject, winner
 ```
-## SELECT in SELECT
+##4. SELECT in SELECT
 Príklady, v ktorých tvoríme dopyty pomocou iných dopytov
 1.
 ```sql
@@ -292,7 +292,7 @@ SELECT name, continent FROM world x
                          WHERE x.continent = y.continent
                          and y.name != x.name)
 ```
-## SUM and COUNT
+##5. SUM and COUNT
 Príklady na agregované funkcie, distinct, order by, group by, having
 
 1.
@@ -336,7 +336,7 @@ SELECT continent FROM world
   GROUP BY continent
   HAVING SUM(population) > 100000000
 ```
-## JOIN
+##6. JOIN
 Príklady na spájanie viacerých tabuliek hra, góly
 
 1.
@@ -381,7 +381,7 @@ SELECT player FROM goal
   JOIN game ON (matchid = id)
   WHERE stadium = 'National Stadium, Warsaw'
 ```
-### More Ťažšie otázky....
+### Ťažšie otázky
 8.
 ```sql
 SELECT DISTINCT player
@@ -426,7 +426,7 @@ LEFT JOIN goal ON game.id = goal.matchid
 GROUP BY id, mdate, team1, team2
 ORDER BY mdate, matchid, team1, team2
 ```
-## More JOIN
+##7. More JOIN
 Príklady na spájanie viacerých tabuliek herci, filmy, obsadenie
 
 1.
@@ -556,7 +556,7 @@ SELECT DISTINCT name FROM casting
 		WHERE actor.name = 'Art Garfunkel'
 )
 ```
-## Using NULL
+##8a. Using NULL
 Používanie stavu NULL, tabuľky učitelia, oddelenia
 
 1.
@@ -616,7 +616,7 @@ SELECT name, CASE WHEN dept IN (1,2) THEN 'Sci'
                   END
                   FROM teacher
 ```
-## Self JOIN
+##9a. Self JOIN
 Príklady na spájanie tabuliek autobusové zastávky, cesty
 1.
 ```sql
@@ -695,4 +695,5 @@ WHERE stopa.name = 'Craiglockhart'
 	AND stopb.name = stopc.name
 ORDER BY LENGTH(a.num), b.num, stopb.name, LENGTH(c.num), d.num;
 ```
-
+##9b. Window function
+Skúmame výsledky všeobecných volieb vo Veľkej Británii
