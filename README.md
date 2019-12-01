@@ -17,7 +17,7 @@
 9a. [Self JOIN](#self-join)
 9b. [Window function](#window-unction)
 
-## 0. SELECT basics
+0. ## SELECT basics
 Niekoľko jednoduchých dopytov, ktoré ti pomôžu začať
 
 1.
@@ -40,11 +40,11 @@ Niekoľko jednoduchých dopytov, ktoré ti pomôžu začať
   SELECT name, area FROM world
     WHERE area BETWEEN 200000 AND 250000
 ```
-##1. SELECT name
+1. ## SELECT name
 Niekoľko dopytov k vyhľadávanie podľa vzorov/pattern matching
 
 
-##2. SELECT from WORLD
+2. ## SELECT from WORLD
 Dopytovanie v tabuľke svet/world
 
 1.
