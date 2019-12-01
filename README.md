@@ -1,19 +1,22 @@
 # Kurzy SQL
 **Kurzy SQL** sú koncipované tak, aby ťa doviedli **od teórie databáz k praxi**. Osvojíš si základné koncepcie a **princípy jazyka SQL**. Naučíme ťa, ako definovať **databázové objekty** a ako pracovať so **základnými príkazmi** a **ďalšími funkciami**. Už ako začiatočník zvládneš tvorbu jednoduchších dotazov. Pre pokročilých je pripravený kurz, v rámci ktorého ťa zasvätíme do jazyka **DML**, **DCL** a osvojíš si tvorbu zložitejších dotazov. Bez problémov zvládneš **správu dát**, **zabezpečenie** a **implementáci**u. 
 
-# Vyriešené príklady SQL Zoo
-[SQLZOO](http://sqlzoo.net)  
+## Vyriešené príklady SQL Zoo ## [SQLZOO](http://sqlzoo.net)  
+## [Cheat mode](http://sqlzoo.net/wiki/SELECT_basics?answer=1)
 
 ## Sections:
-1. [SELECT basics](#select-basics)
+0. [SELECT basics](#select-basics)
+1. [SELECT name](#select-name)
 2. [SELECT from WORLD](#select-from-world)
 3. [SELECT from NOBEL](#select-from-nobel)
 4. [SELECT in SELECT](#select-in-select)
 5. [SUM and COUNT](#sum-and-count)
 6. [JOIN](#join)
 7. [More JOIN](#more-join)
-8. [Using NULL](#using-null)
-9. [Self JOIN](#self-join)
+8a.[Using NULL](#using-null)
+8b.[Numeric Examples](#numeric-eamples)
+9a.[Self JOIN](#self-join)
+9b.[Window function](#window-unction)
 
 ## SELECT basics
 Some simple queries to get you started
