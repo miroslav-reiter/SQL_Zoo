@@ -1,3 +1,6 @@
+# Kurzy SQL
+**Kurzy SQL** sú koncipované tak, aby ťa doviedli **od teórie databáz k praxi**. Osvojíš si základné koncepcie a **princípy jazyka SQL**. Naučíme ťa, ako definovať **databázové objekty** a ako pracovať so **základnými príkazmi** a **ďalšími funkciami**. Už ako začiatočník zvládneš tvorbu jednoduchších dotazov. Pre pokročilých je pripravený kurz, v rámci ktorého ťa zasvätíme do jazyka **DML**, **DCL** a osvojíš si tvorbu zložitejších dotazov. Bez problémov zvládneš **správu dát**, **zabezpečenie** a **implementáci**u. 
+
 # Vyriešené príklady SQL Zoo
 [SQLZOO](http://sqlzoo.net)  
 
