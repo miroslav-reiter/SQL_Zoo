@@ -128,6 +128,7 @@ FROM world ORDER BY name
 ```
 
 ## SELECT from NOBEL
+Dodatočné precvičenie základných príkazov a funkcií pomocou tabuľky nositeľov Nobelovej ceny
 1.
 ```sql
 SELECT yr, subject, winner
@@ -215,6 +216,7 @@ SELECT winner, subject
  ORDER BY subject in ('Chemistry','Physics'), subject, winner
 ```
 ## SELECT in SELECT
+Príklady, v ktorých tvoríme dopyty pomocou iných dopytov
 1.
 ```sql
 SELECT name FROM world
@@ -291,6 +293,8 @@ SELECT name, continent FROM world x
                          and y.name != x.name)
 ```
 ## SUM and COUNT
+Príklady na agregované funkcie, distinct, order by, group by, having
+
 1.
 ```sql
 SELECT SUM(population)
@@ -333,6 +337,8 @@ SELECT continent FROM world
   HAVING SUM(population) > 100000000
 ```
 ## JOIN
+Príklady na spájanie viacerých tabuliek hra, góly
+
 1.
 ```sql
 SELECT matchid, player FROM goal
@@ -421,6 +427,8 @@ GROUP BY id, mdate, team1, team2
 ORDER BY mdate, matchid, team1, team2
 ```
 ## More JOIN
+Príklady na spájanie viacerých tabuliek herci, filmy, obsadenie
+
 1.
 ```sql
 SELECT id, title
@@ -549,6 +557,8 @@ SELECT DISTINCT name FROM casting
 )
 ```
 ## Using NULL
+Používanie stavu NULL, tabuľky učitelia, oddelenia
+
 1.
 ```sql
 SELECT name FROM teacher
@@ -607,6 +617,7 @@ SELECT name, CASE WHEN dept IN (1,2) THEN 'Sci'
                   FROM teacher
 ```
 ## Self JOIN
+Príklady na spájanie tabuliek autobusové zastávky, cesty
 1.
 ```sql
 SELECT DISTINCT COUNT(*) FROM stops
