@@ -9,7 +9,7 @@ SQLmap
 Hashcat
 
 -- Vyhľadávacie dopyty Google/Bing:
-PHP + MySQL
+PHP/ASP + MySQL/MS SQL Server
 php?id=
 asp?id=
 
